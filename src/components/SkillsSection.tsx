@@ -3,15 +3,15 @@ import { motion } from "framer-motion";
 const skillCategories = [
   {
     title: "Web Development",
-    skills: ["HTML", "CSS", "React", "Next.js", "Tailwind", "Express", "Node.js", "Flask"],
+    skills: ["HTML", "CSS", "React", "Next.js", "Tailwind", "Express", "Node.js", "Flask","JWT-Auth","bycrypt"],
   },
   {
-    title: "AI / ML",
-    skills: ["Python", "NumPy", "Pandas", "Keras", "Scikit-learn"],
+    title: "AIML & Data Science",
+    skills: ["Python", "NumPy", "Pandas","Matplotlib","Seaborn","Keras", "Scikit-learn"],
   },
   {
     title: "Tools & Cloud",
-    skills: ["Git", "GitHub", "Vercel", "Render", "MongoDB"],
+    skills: ["Git", "GitHub", "Vercel", "Render", "MongoDB","MySQL","PostgreSQL"],
   },
 ];
 

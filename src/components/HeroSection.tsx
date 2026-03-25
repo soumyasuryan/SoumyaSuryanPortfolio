@@ -16,7 +16,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-sm font-display tracking-widest uppercase text-primary mb-6"
+          className="text-sm font-display tracking-widest uppercase text-primary mb-6 md:mt-6"
         >
           Web Developer · AI Enthusiast
         </motion.p>
@@ -25,19 +25,19 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="font-display font-bold text-5xl md:text-7xl lg:text-8xl leading-tight mb-6"
+          className="font-display font-bold text-5xl md:text-7xl lg:text-7xl sm:mt-10 leading-tight mb-6"
         >
           The man with a{" "}
           <span className="text-gradient">vision</span>
           <br />
-          who never gives up.
+          who never abandons the task given.
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7 }}
-          className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10"
+          className="text-muted-foreground text-md md:text-lg max-w-2xl mx-auto mb-10"
         >
           Crafting performant, modern web apps with the latest technologies.
           I explore tech the way others explore maps — one unknown at a time.

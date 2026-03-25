@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Mail, Github, Linkedin, Instagram } from "lucide-react";
 
 const links = [
-  { icon: Mail, label: "Email", href: "mailto:soumyasuryan86@gmail.com" },
+  { icon: Mail, label: "Email", href: "https://mail.google.com/mail/?view=cm&fs=1&to=soumyasuryan86@gmail.com" },
   { icon: Github, label: "GitHub", href: "https://github.com/soumyasuryan/" },
   { icon: Linkedin, label: "LinkedIn", href: "https://in.linkedin.com/in/soumya-suryan-62bb5a380" },
   { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/soumya_suryan_/" },

@@ -2,6 +2,15 @@ import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
+  
+   {
+    title: "Delhi's Heat Sheild",
+    description:
+      "Delhi HeatShield is a real-time heat vulnerability monitoring platform that maps risk across Delhi's 280+ wards using climate data, satellite imagery, and demographic indicators — identifying who is most at risk before extreme heat turns fatal.",
+    tags: ["Vite", "React","Flask","Tailwind","HttpOnly Cookies","PostgreSQL"],
+    visit: "https://eduvault-79fv.onrender.com/",
+    code: "https://github.com/soumyasuryan",
+  },
   {
     title: "StriRise",
     description:
@@ -18,14 +27,7 @@ const projects = [
     visit: "https://krishi-gram.vercel.app/",
     code: "https://github.com/soumyasuryan",
   },
-  {
-    title: "EduVault",
-    description:
-      "A platform full of Ebooks, cheat sheets, courses and case studies for learners.",
-    tags: ["Node.js", "MongoDB", "Next.js", "React"],
-    visit: "https://eduvault-79fv.onrender.com/",
-    code: "https://github.com/soumyasuryan",
-  },
+ 
 ];
 
 const ProjectsSection = () => {
