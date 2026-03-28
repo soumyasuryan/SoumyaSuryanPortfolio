@@ -8,7 +8,7 @@ const projects = [
     description:
       "Delhi HeatShield is a real-time heat vulnerability monitoring platform that maps risk across Delhi's 280+ wards using climate data, satellite imagery, and demographic indicators — identifying who is most at risk before extreme heat turns fatal.",
     tags: ["Vite", "React","Flask","Tailwind","HttpOnly Cookies","PostgreSQL"],
-    visit: "https://eduvault-79fv.onrender.com/",
+    visit: "https://delhi-heat-sheild.vercel.app/",
     code: "https://github.com/soumyasuryan",
   },
   {
