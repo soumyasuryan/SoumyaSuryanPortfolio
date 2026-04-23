@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Route } from "lucide-react";
 
 const milestones = [
   { year: "2022–23", title: "Secondary Schooling", place: "Jindal Public School" },
@@ -11,45 +12,61 @@ const milestones = [
 
 const RoadmapSection = () => {
   return (
-    <section id="roadmap" className="section-padding max-w-4xl mx-auto">
+    <section id="roadmap" className="section-padding max-w-5xl mx-auto px-6 md:px-12 relative z-10">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.7 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        className="flex flex-col items-center md:items-start text-center md:text-left mb-16"
       >
-        <p className="text-sm font-display tracking-widest uppercase text-primary mb-4">
-          Journey
-        </p>
-        <h2 className="font-display font-bold text-3xl md:text-5xl mb-12">
-          Suryan's <span className="text-gradient">Roadmap</span>
+        <div className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 backdrop-blur-md mb-6">
+          <Route className="h-3.5 w-3.5 text-primary" />
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/90">
+            Journey
+          </p>
+        </div>
+        
+        <h2 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl tracking-tight text-white drop-shadow-xl">
+          Suryan's <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-amber-200">Roadmap</span>
         </h2>
       </motion.div>
 
       <div className="relative">
-        {/* Vertical line */}
-        <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-px" />
+        {/* Glowing Vertical line */}
+        <div className="absolute left-6 md:left-1/2 top-4 bottom-4 w-[2px] bg-gradient-to-b from-primary/50 via-primary/20 to-transparent md:-translate-x-[1px]" />
 
-        <div className="space-y-12">
+        <div className="space-y-8">
           {milestones.map((m, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className={`relative flex items-start gap-6 md:gap-0 ${
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+              className={`relative flex items-center w-full gap-8 md:gap-0 ${
                 i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
               }`}
             >
-              {/* Dot */}
-              <div className="absolute left-4 md:left-1/2 w-3 h-3 bg-primary rounded-full -translate-x-1.5 mt-2 glow-border z-10" />
+              {/* Glowing Dot */}
+              <div className="absolute left-6 md:left-1/2 w-4 h-4 bg-primary rounded-full -translate-x-[7px] md:-translate-x-[7px] z-10 shadow-[0_0_15px_rgba(251,191,36,0.6)] border-2 border-background" />
 
-              {/* Content */}
-              <div className={`ml-12 md:ml-0 md:w-1/2 ${i % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"}`}>
-                <span className="text-xs font-display tracking-wider text-primary">{m.year}</span>
-                <h3 className="font-display font-semibold text-lg text-foreground mt-1">{m.title}</h3>
-                <p className="text-sm text-muted-foreground mt-1">{m.place}</p>
+              {/* Content Card */}
+              <div className={`flex-1 md:flex-none ml-16 md:ml-0 md:w-1/2 ${i % 2 === 0 ? "md:pr-16" : "md:pl-16"}`}>
+                <motion.div 
+                  whileHover={{ y: -5, scale: 1.02 }}
+                  className="group relative rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md shadow-[0_0_20px_rgba(0,0,0,0.2)] overflow-hidden transition-all duration-300 hover:border-primary/30 hover:bg-white/10"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  
+                  <div className="relative z-10">
+                    <span className="inline-block px-3 py-1 mb-3 rounded-full bg-primary/10 text-xs font-bold tracking-wider text-primary border border-primary/20">
+                      {m.year}
+                    </span>
+                    <h3 className="font-display font-semibold text-xl text-white mb-2">{m.title}</h3>
+                    <p className="text-sm font-light text-white/60">{m.place}</p>
+                  </div>
+                </motion.div>
               </div>
             </motion.div>
           ))}
