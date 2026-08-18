@@ -1,6 +1,5 @@
 import { motion, Variants } from "framer-motion";
 import { Zap } from "lucide-react";
-
 const skillCategories = [
   {
     title: "Web Development",
@@ -9,16 +8,24 @@ const skillCategories = [
     borderAccent: "group-hover:border-blue-500/40",
     index: "01",
     skills: [
-       "React", "Next.js", "Tailwind",
+      "React", "Next.js", "Tailwind",
       "Express", "Node.js", "Flask", "JWT-Auth", "bcrypt",
     ],
+  },
+  {
+    title: "MLops",
+    accent: "from-emerald-500 to-teal-400",
+    glowColor: "rgba(16,185,129,0.15)",
+    borderAccent: "group-hover:border-emerald-500/40",
+    index: "02",
+    skills: ["Mlflow", "DVC", "Dagshub", "Docker", "FastAPI", "GitHub Actions", "PostgreSQL"],
   },
   {
     title: "AIML & Data Science",
     accent: "from-violet-500 to-fuchsia-400",
     glowColor: "rgba(139,92,246,0.15)",
     borderAccent: "group-hover:border-violet-500/40",
-    index: "02",
+    index: "03",
     skills: [
       "Python", "NumPy", "Pandas", "Matplotlib",
       "Seaborn", "Keras", "Scikit-learn",
@@ -29,16 +36,31 @@ const skillCategories = [
     accent: "from-orange-500 to-amber-400",
     glowColor: "rgba(249,115,22,0.15)",
     borderAccent: "group-hover:border-orange-500/40",
-    index: "03",
-    skills: [ "Amazon Web Services","Vercel", "Render", "Docker", ],
+    index: "04",
+    skills: ["Amazon Web Services", "Vercel", "Render", "Docker"],
   },
   {
     title: "Tools & Databases",
-    accent: "from-emerald-500 to-teal-400",
-    glowColor: "rgba(16,185,129,0.15)",
-    borderAccent: "group-hover:border-emerald-500/40",
-    index: "04",
+    accent: "from-cyan-500 to-sky-400",
+    glowColor: "rgba(6,182,212,0.15)",
+    borderAccent: "group-hover:border-cyan-500/40",
+    index: "05",
     skills: ["Git", "GitHub", "MongoDB", "MySQL", "PostgreSQL"],
+  },
+  {
+    title: "AI Tools & Assistants",
+    accent: "from-rose-500 to-pink-400",
+    glowColor: "rgba(244,63,94,0.15)",
+    borderAccent: "group-hover:border-rose-500/40",
+    index: "06",
+    skills: [
+      "Cursor",
+      "Google Antigravity",
+      "GitHub Copilot",
+      "OpenAI Codex",
+      "ChatGPT",
+      "v0",
+    ],
   },
 ];
 
